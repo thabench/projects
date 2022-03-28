@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Selected Loan</title>
+</head>
+<body align="center">
+<h4>This is the Selected Loan</h4>
+<p>
+    Loan named: {{loan_name}}<br>
+    Amount: {{loan_amount}}<br>
+    Interest rate: {{loan_interest}}<br>
+    Term (in months): {{loan_term}}<br>
+    <a href=update_loan><button>Update Loan</button></a>
+
+</p>
+
+{% for i in table %}
+{{titles[loop.index]}}
+{{i|safe}}
+{% endfor %}
+
+
+<img src="{{chart}}">
+</form>
+</body>
+</html>
